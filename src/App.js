@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+
 import './App.css';
+import NavBar from './components/NavBar';
+import TopBar from './components/TopBar';
+import CatalogContent from './components/CatalogContent';
+import SearchWidget from "./components/SearchWidget";
+import './fontawesome'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <TopBar greeting="Despacho gratis por compras sobre $50.000 CLP"/>
+      <header>
+      <SearchWidget />
+        <NavBar />
+       </header>
+      
+      <main className="container-lg">
+          <CatalogContent greetingCatalog="Hola! este es el listado de productos disponibles"/>
+      </main>
+    <footer>Pie de página</footer>
+    </>
   );
 }
-
 export default App;
+
+
